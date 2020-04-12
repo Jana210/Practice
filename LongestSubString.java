@@ -3,7 +3,7 @@ import java.util.Set;
 
 public class LongestSubString {
 
-	public int lengthOfLongestSubstring(String s) {
+	public static int lengthOfLongestSubstring(String s) {
 		int length = 0;
 		for (int i = 0; i < s.length(); i++) {
 			for (int j = i + 1; j <= s.length(); j++) {
@@ -15,7 +15,7 @@ public class LongestSubString {
 		return length;
 	}
 
-	private boolean allUniqueChar(String s, int i, int j) {
+	private static boolean allUniqueChar(String s, int i, int j) {
 		Set<Character> longChar = new HashSet<>();
 		for (int x = i; x < j; x++) {
 			if (longChar.contains(s.charAt(x))) {
